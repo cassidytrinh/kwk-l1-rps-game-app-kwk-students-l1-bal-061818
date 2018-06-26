@@ -1,20 +1,20 @@
 class RPSGame
   attr_accessor :play
 
-  def initialize(play)
-    if valid_play?(play) == true
-      @play = play
-    else
-      raise PlayTypeError
-    end
-  end
-
   def valid_play?(play)
     if play == "rock" || play == "paper" || play == "scissors"
       return true
     else
       raise PlayTypeError
       return false
+    end
+  end
+
+  def initialize(play)
+    if valid_play?(play) == true
+      @play = play
+    else
+      raise PlayTypeError
     end
   end
 
