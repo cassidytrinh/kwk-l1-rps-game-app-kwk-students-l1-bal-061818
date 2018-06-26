@@ -4,6 +4,9 @@ class RPSGame
   def initialize(play)
     if valid_play(play) == true
       @play = play
+    else
+      raise PlayTypeError
+    end
   end
 
   def valid_play(play)
