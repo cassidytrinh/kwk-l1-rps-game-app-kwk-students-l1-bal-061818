@@ -10,10 +10,9 @@ class RPSGame
   end
 
   def valid_play?(play)
-    if play == 'rock' || play == 'paper' || play =='scissors'
+    if play == "rock" || play == "paper" || play == "scissors"
       return true
     else
-      raise PlayTypeError
       return false
     end
   end
