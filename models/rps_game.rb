@@ -11,8 +11,10 @@ class RPSGame
 
   def valid_play?(play)
     if play == "rock" || play == "paper" || play == "scissors"
+      puts play+"true"
       return true
     else
+      puts play+"false"
       return false
     end
   end
