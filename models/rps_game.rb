@@ -2,7 +2,11 @@ class RPSGame
   attr_accessor :play
 
   def initialize(play)
-    @play = play
+    if play == "rock" || play == "paper" || play == "scissors"
+      @play = play
+    else
+      raise PlayTypeError
+    end
   end
   
   class PlayTypeError < StandardError
