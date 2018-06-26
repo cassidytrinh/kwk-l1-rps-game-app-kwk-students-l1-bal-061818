@@ -2,12 +2,17 @@ class RPSGame
   attr_accessor :play
 
   def initialize(play)
-    if play == "rock" || play == "paper" || play == "scissors"
+    if valid_play(play) == true
       @play = play
+  end
+
+  def valid_play(play)
+    if play == "rock" || play == "paper" || play == "scissors"
+      return true
     else
       raise PlayTypeError
+      return false
     end
-  end
 
   class PlayTypeError < StandardError
     # Don't be alarmed! This is a class set inside a class, but works just fine in Ruby
