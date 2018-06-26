@@ -16,6 +16,7 @@ class RPSGame
       raise PlayTypeError
       return false
     end
+  end
 
   class PlayTypeError < StandardError
     # Don't be alarmed! This is a class set inside a class, but works just fine in Ruby
